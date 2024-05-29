@@ -19,7 +19,7 @@ const MainNav = () => {
                   textDecoration: isActive ? "underline" : "",
                 };
               }}
-              to="/"
+              to="/home"
             >
               Home
             </NavLink>
@@ -63,7 +63,7 @@ const MainNav = () => {
                     }} to='/register'>Register</NavLink>
                 </div> */}
                 <div>
-                    <NavLink onClick={logOut} to='/login'>Log out</NavLink>
+                    <NavLink onClick={logOut} to='/'>Log out</NavLink>
                 </div>
         </div>
       </nav>

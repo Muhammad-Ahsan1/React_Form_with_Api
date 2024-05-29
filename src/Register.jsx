@@ -33,7 +33,7 @@ const Register = () => {
       const data = await res.json();
       if (res.ok) {
         alert("Registeration Successful!!!!");
-        navigate("/login");
+        navigate("/");
       } else {
         alert(data.message || "Registeration Failed :(");
       }
@@ -102,7 +102,7 @@ const Register = () => {
             <div className="login-link">
               <p>
                 Already a user?{" "}
-                <NavLink className="login-link" to="/login">
+                <NavLink className="login-link" to="/">
                   Login
                 </NavLink>
               </p>

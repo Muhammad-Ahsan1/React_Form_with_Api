@@ -1,0 +1,32 @@
+.main-nav {
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  align-items: center;
+}
+.nav-left {
+  display: flex;
+  gap: 15px;
+  padding-left: 30px;
+}
+.nav-right {
+  display: flex;
+  gap: 15px;
+  padding-right: 30px;
+}
+a {
+  border: none;
+  text-decoration: none;
+  color: #000;
+  transition: color ease 0.3s;
+  border-radius: 5px;
+  background-color: transparent;
+  padding: 5px 10px;
+  outline: none;
+  transition: background-color ease 0.3s;
+}
+a:hover {
+  color: white;
+  background-color: rgb(255, 172, 71);
+}

@@ -2,6 +2,11 @@ import { NavLink } from "react-router-dom";
 import styles from "./MainNav.module.css";
 
 const MainNav = () => {
+
+  const logOut = () => {
+    localStorage.removeItem('login')
+  }
+  
   return (
     <div>
       <nav className={styles["main-nav"]}>
@@ -14,7 +19,7 @@ const MainNav = () => {
                   textDecoration: isActive ? "underline" : "",
                 };
               }}
-              to="/home"
+              to="/"
             >
               Home
             </NavLink>
@@ -57,6 +62,9 @@ const MainNav = () => {
                         return {color: isActive ? 'lightCoral' : '', textDecoration: isActive ? 'underline' : ''}
                     }} to='/register'>Register</NavLink>
                 </div> */}
+                <div>
+                    <NavLink onClick={logOut} to='/login'>Log out</NavLink>
+                </div>
         </div>
       </nav>
     </div>

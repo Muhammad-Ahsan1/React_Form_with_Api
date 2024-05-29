@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Nav from "./Nav";
 import { NavLink, useNavigate } from "react-router-dom";
+let token;
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const navigate = useNavigate();
+
 
   const toggleShowPassword = () => {
     setShowPassword(!showPassword);
@@ -25,15 +27,21 @@ const Login = () => {
         }),
       });
       const data = await res.json();
+      console.log(data)
       if (res.ok) {
         alert("Login Successful!!!!");
-        navigate("/home");
       } else {
         alert(data.message || "Login Failed :(");
       }
+      token = data.token;
+      localStorage?.setItem('login', token)
+      let login = localStorage.getItem('login')
+    if(login){
+      navigate('/')
+    }
     } catch (error) {
-      console.error("Error registering user:", error);
-      alert("Failed to register. Please try again later.");
+      console.error("Error loging in user:", error);
+      alert("Failed to login. Please try again later.");
     }
   };
 

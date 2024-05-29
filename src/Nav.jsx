@@ -12,7 +12,7 @@ const Nav = () => {
                 <div>
                     <NavLink style={({isActive}) => {
                         return {color: isActive ? 'lightCoral' : '', textDecoration: isActive ? 'underline' : ''}
-                    }} to='/login'>Login</NavLink>
+                    }} to='/'>Login</NavLink>
                 </div>
                 <div>
                     <NavLink style={({isActive}) => {

@@ -37,7 +37,7 @@ const Login = () => {
       localStorage?.setItem('login', token)
       let login = localStorage.getItem('login')
     if(login){
-      navigate('/')
+      navigate('/home')
     }
     } catch (error) {
       console.error("Error loging in user:", error);
